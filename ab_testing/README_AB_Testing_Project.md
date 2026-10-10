@@ -78,20 +78,9 @@ p_value = 2 * (1 - stats.norm.cdf(abs(z)))
 
 ---
 
-### 4️⃣ Results
-| Metric | Group A | Group B |
-|--------:|---------:|---------:|
-| Conversion Rate | 0.100 | 0.120 |
-| Z-Score | ≈ 2.58 |
-| P-Value | ≈ 0.0099 |
+### 4️⃣ Results and interpretation
 
-Since **p < 0.05**, we **reject H₀** — the new design (Group B) significantly improved conversions.
-
----
-
-### 5️⃣ Recommendation
-✅ **Adopt the new design** — it yields a statistically significant lift in conversions (~20 % improvement).  
-Further testing with a larger sample or over a longer period is recommended to confirm long-term performance.
+Compute conversion counts, rates, the Z-score, and the two-sided p-value by running the notebook against the committed CSV. The former example values were not a verified report of that file. A significant two-sided test indicates a difference; check its direction and effect size before recommending a variant. This project is documented as a simulation, so it does not support deploying a real website change.
 
 ---
 
@@ -107,9 +96,9 @@ Further testing with a larger sample or over a longer period is recommended to c
 ab_testing_project/
 │
 ├── ab_test_results.csv         # dataset
-├── ab_test_analysis.ipynb      # notebook with EDA + testing
-├── README.md                   # this file
-└── requirements.txt            # library dependencies
+├── ab_testing.ipynb      # notebook with EDA + testing
+├── README_AB_Testing_Project.md # this file
+└── (dependencies in ../requirements.txt)
 ```
 
 ---
@@ -127,3 +116,7 @@ pip install pandas numpy seaborn matplotlib scipy jupyterlab
 **David Solomon**  
 Data Science & AI Learner  
 📧 funomdave@gmail.com  
+
+## Working directory
+
+Run `ab_testing.ipynb` with this directory as the notebook working directory. Install `../requirements.txt` in the environment first.
