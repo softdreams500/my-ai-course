@@ -1,0 +1,3 @@
+[submodule "covid-trend"]
+	path = covid-trend
+	url = https://github.com/softdreams500/covid-nigeria-trends.git
